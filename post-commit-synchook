@@ -2,7 +2,7 @@
 ENV_FILE_PATH=~/.brakecode/.env
 
 if [[ -z ${BRAKECODE_API_KEY} ]]; then
-    BRAKECODE_API_KEY=$(cat $ENV_FILE_PATH  | grep BRAKECODE_API_KEY | cut -f2 -d"=");
+    BRAKECODE_API_KEY=$(cat $ENV_FILE_PATH | grep BRAKECODE_API_KEY | cut -f2 -d"=");
     if [[ -z ${BRAKECODE_API_KEY} ]]; then
         read -sp "Please enter your BrakeCODE API Key: " BRAKECODE_API_KEY;
         if [[ -z ${BRAKECODE_API_KEY} ]]; then
